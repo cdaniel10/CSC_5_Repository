@@ -46,8 +46,7 @@ int main(int argc, char** argv) {
             break;}
         case 2:{
             //Declare Variables
-            unsigned short days;
-            float dSalary=0.01f, total=0.00f;
+            unsigned days, dSalary=1, total=0, dollars, pennies;
 
             //Input
             do{
@@ -59,9 +58,13 @@ int main(int argc, char** argv) {
                 total+=dSalary;
                  dSalary*=2;    //Salary Doubles Daily
             }
+            dollars = total/100;
+            pennies = total%100;
 
             //Display the outputs
-            cout<<"Pay = $"<<total;
+            cout<<"Pay = $"<<dollars<<".";
+            if (pennies<10)cout<<'0';
+            cout<<pennies;
             break;}
         case 3:{
             //Declare Variables
